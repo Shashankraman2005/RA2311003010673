@@ -59,7 +59,7 @@ export default function App() {
       );
       const token = authRes.data.access_token;
       const res = await axios.get(
-        "http://20.207.122.201/evaluation-service/notifications",
+        "/evaluation-service/notifications",
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setNotifications(res.data.notifications);
