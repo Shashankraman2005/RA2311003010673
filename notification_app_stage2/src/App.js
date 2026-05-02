@@ -54,7 +54,7 @@ export default function App() {
     try {
       setLoading(true);
       const authRes = await axios.post(
-        "http://20.207.122.201/evaluation-service/auth",
+        "/evaluation-service/auth",
         AUTH
       );
       const token = authRes.data.access_token;
